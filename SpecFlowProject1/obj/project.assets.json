@@ -7024,11 +7024,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lavanya.parameswaran\\OneDrive - Accenture\\Desktop\\CreativeTech\\CreativeTech\\SpecFlowProject1\\SpecFlowProject1.csproj",
+      "projectUniqueName": "C:\\Users\\lavanya.parameswaran\\AppData\\Local\\Temp\\Test\\CreativeTech\\SpecFlowProject1\\SpecFlowProject1.csproj",
       "projectName": "SpecFlowProject1",
-      "projectPath": "C:\\Users\\lavanya.parameswaran\\OneDrive - Accenture\\Desktop\\CreativeTech\\CreativeTech\\SpecFlowProject1\\SpecFlowProject1.csproj",
+      "projectPath": "C:\\Users\\lavanya.parameswaran\\AppData\\Local\\Temp\\Test\\CreativeTech\\SpecFlowProject1\\SpecFlowProject1.csproj",
       "packagesPath": "C:\\Users\\lavanya.parameswaran\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lavanya.parameswaran\\OneDrive - Accenture\\Desktop\\CreativeTech\\CreativeTech\\SpecFlowProject1\\obj\\",
+      "outputPath": "C:\\Users\\lavanya.parameswaran\\AppData\\Local\\Temp\\Test\\CreativeTech\\SpecFlowProject1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lavanya.parameswaran\\AppData\\Roaming\\NuGet\\NuGet.Config",

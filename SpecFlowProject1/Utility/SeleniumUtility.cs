@@ -23,9 +23,6 @@ namespace CreativeTech
                 options.AddArguments("--start-maximized");
                 driver = new ChromeDriver(options);
             }
-            //Implicit wait
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
-
         }
 
         public static void fnOpenUrl(string strURL)
@@ -49,21 +46,27 @@ namespace CreativeTech
             try
             {
                 //Wait for element to be visible
-                var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(45));
+                var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
                 wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.ClassName("App-logo")));
             }
             catch
             {
                 elem = null;
             }
-
-
         }
 
         public static void fnWaitForElement(IWebElement element)
         {
-            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(45));
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(element));
+            try
+            {
+                //Wait for element to be visible
+                var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(900));
+                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(element));
+            }
+            catch
+            {
+                elem = null;
+            }            
         }
 
         public static void fnVerifyPageOpened(string strTitle)
@@ -142,16 +145,22 @@ namespace CreativeTech
                 {
                     fnWaitForElement(jsPage.btnCheckDetails);
                     jsPage.btnCheckDetails.Click();
+                    fnWaitForElement(jsPage.statictxtCity);
+                    fnWaitForElement(jsPage.statictxtCountry);
                 }
                 else if (strCustName == "Jeff Bridges")
                 {
                     fnWaitForElement(jbPage.btnCheckDetails);
                     jbPage.btnCheckDetails.Click();
+                    fnWaitForElement(jsPage.statictxtCity);
+                    fnWaitForElement(jsPage.statictxtCountry);
                 }
                 else if (strCustName == "Steve Jones")
                 {
                     fnWaitForElement(sjPage.btnCheckDetails);
                     sjPage.btnCheckDetails.Click();
+                    fnWaitForElement(jsPage.statictxtCity);
+                    fnWaitForElement(jsPage.statictxtCountry);
                 }
             }
             catch (Exception e)
